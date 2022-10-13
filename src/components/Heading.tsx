@@ -6,7 +6,7 @@ import { Slot } from '@radix-ui/react-slot';
 export interface HeadingProps {
   size?: 'sm' | 'md' | 'lg';
   children: ReactNode;
-  asChild: boolean;
+  asChild?: boolean;
 }
 
 export function Heading({ size = 'md', children, asChild }: HeadingProps) {
