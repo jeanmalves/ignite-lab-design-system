@@ -15,12 +15,18 @@ export function SignIn() {
   async function handleSignIn(event: FormEvent) {
     event.preventDefault();
 
-    await axios.post('/sessions', {
-      email: 'amarildo.silva@teste.com',
-      password: '123123',
-    });
+    try {
+      await axios.post('/sessions', {
+        email: 'amarildo.silva@teste.com',
+        password: '123123',
+      });
 
-    setIsUserSignedIn(true);
+      setIsUserSignedIn(true);
+
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
   return (
