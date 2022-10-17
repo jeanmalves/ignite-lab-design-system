@@ -20,13 +20,11 @@ export function SignIn() {
         email: 'amarildo.silva@teste.com',
         password: '123123',
       });
-
-      setIsUserSignedIn(true);
-
     } catch (error) {
       console.error(error);
     }
 
+    setIsUserSignedIn(true);
   }
 
   return (
